@@ -52,7 +52,7 @@ def solve_part2(start):
     char_list = inputs.upper()
     char_list = sorted(list(set(char_list)))
 
-    print char_list
+    # print char_list
 
     # char, size
     min_val = (None, None)
@@ -69,12 +69,14 @@ def solve_part2(start):
 def run():
 
     start_time = time.time()
-
     print "Part 1:"
     solve_part1(0)
+    print "Runtime: {} seconds".format(time.time() - start_time)
+
+    start_time = time.time()
     print "Part 2:"
     solve_part2(0)
-
     print "Runtime: {} seconds".format(time.time() - start_time)
+
 
 run()
