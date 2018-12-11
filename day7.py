@@ -136,7 +136,10 @@ def solve_part2(start):
 
         working = [w.get_task() for w in workers]
         working_format = [w if w else '#' for w in working]
-        print('{:03d} | working: {}'.format(ticks, working_format))
+        sys.stdout.write('{:03d} | working: {}'.format(ticks, working_format))
+        sys.stdout.write('\r')
+        sys.stdout.flush()
+        # time.sleep(0.01)
 
         # do work
         for worker in workers:
